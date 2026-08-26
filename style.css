@@ -1,0 +1,1233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f5f8f3;
+
+    color: #13251a;
+
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(245, 248, 243, 0.94);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #dce6dc;
+}
+
+
+.nav-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 8px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 22px;
+
+    font-weight: 800;
+}
+
+
+.brand img {
+    width: 38px;
+
+    height: 38px;
+
+    object-fit: contain;
+}
+
+
+nav {
+    display: flex;
+
+    gap: 28px;
+}
+
+
+nav a {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #4d6252;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+    color: #23843f;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 720px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 28px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+.small-title,
+.eyebrow {
+    color: #23843f;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.hero h1 {
+    margin-top: 18px;
+
+    font-size: clamp(58px, 8vw, 105px);
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+}
+
+
+.hero h1 span,
+.section-heading span,
+.final-message span {
+    color: #23843f;
+}
+
+
+.hero-text {
+    max-width: 570px;
+
+    margin-top: 30px;
+
+    font-size: 18px;
+
+    color: #5a6b5e;
+}
+
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+.primary-button,
+.secondary-button {
+    padding: 14px 23px;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.primary-button {
+    background: #23843f;
+
+    color: white;
+}
+
+
+.primary-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(35, 132, 63, 0.25);
+}
+
+
+.secondary-button {
+    border: 1px solid #b9c9bb;
+
+    color: #27422e;
+}
+
+
+.secondary-button:hover {
+    background: #e6eee5;
+}
+
+
+/* =========================
+   HERO NATURE SCENE
+========================= */
+
+.hero-nature {
+    min-height: 480px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.nature-scene {
+    width: 430px;
+
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #dcefd6 0%,
+            #eef6e9 48%,
+            #a7c99b 49%,
+            #65966a 100%
+        );
+
+    box-shadow:
+        0 35px 70px rgba(39, 84, 48, 0.22);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.nature-scene:hover {
+    transform: translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 45px 85px rgba(39, 84, 48, 0.28);
+}
+
+
+/* SUN */
+
+.sun {
+    position: absolute;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #f4d889;
+
+    top: 70px;
+
+    right: 75px;
+
+    box-shadow:
+        0 0 50px rgba(244, 216, 137, 0.55);
+}
+
+
+/* HILLS */
+
+.hill {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.hill-back {
+    width: 520px;
+
+    height: 230px;
+
+    left: -40px;
+
+    bottom: 105px;
+
+    background: #8fb889;
+
+    transform: rotate(-5deg);
+}
+
+
+.hill-front {
+    width: 560px;
+
+    height: 260px;
+
+    left: -55px;
+
+    bottom: -80px;
+
+    background: #477b52;
+
+    transform: rotate(4deg);
+}
+
+
+/* TREES */
+
+.tree {
+    position: absolute;
+
+    bottom: 85px;
+
+    z-index: 5;
+}
+
+
+.tree-trunk {
+    position: absolute;
+
+    width: 16px;
+
+    height: 75px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    bottom: 0;
+
+    background: #654b32;
+
+    border-radius: 5px;
+}
+
+
+.tree-top {
+    position: absolute;
+
+    width: 78px;
+
+    height: 78px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    bottom: 48px;
+
+    border-radius: 50%;
+
+    background: #286b3c;
+
+    box-shadow:
+        25px 8px 0 #347b45,
+        -24px 12px 0 #3d8750,
+        8px -22px 0 #4b9256;
+}
+
+
+.tree-one {
+    left: 75px;
+
+    transform: scale(1.15);
+}
+
+
+.tree-two {
+    right: 75px;
+
+    transform: scale(0.85);
+}
+
+
+.tree-three {
+    left: 205px;
+
+    bottom: 65px;
+
+    transform: scale(0.65);
+}
+
+
+/* =========================
+   FLOATING NATUREX CARD
+========================= */
+
+.hero-card {
+    position: absolute;
+
+    bottom: 35px;
+
+    left: 15px;
+
+    background: white;
+
+    padding: 14px 18px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(25, 55, 31, 0.18);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    z-index: 20;
+
+    animation:
+        floatingCard 4s ease-in-out infinite;
+}
+
+
+.hero-card img {
+    width: 34px;
+
+    height: 34px;
+
+    object-fit: contain;
+
+    border-radius: 6px;
+}
+
+
+.hero-card div {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.hero-card strong {
+    font-size: 15px;
+}
+
+
+.hero-card span {
+    color: #708074;
+
+    font-size: 12px;
+}
+
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* =========================
+   DEVELOPMENT NOTICE
+========================= */
+
+.development {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        0 28px 90px;
+}
+
+
+.development-card {
+    background: #e7f1e4;
+
+    border: 1px solid #cbdcc8;
+
+    border-radius: 24px;
+
+    padding: 30px;
+
+    display: flex;
+
+    gap: 22px;
+
+    align-items: flex-start;
+}
+
+
+.development-icon {
+    font-size: 32px;
+}
+
+
+.development-label {
+    color: #56805c;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.development h2 {
+    margin:
+        4px 0 8px;
+
+    font-size: 25px;
+}
+
+
+.development p:last-child {
+    color: #607064;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        110px 28px;
+}
+
+
+.section-heading h2 {
+    margin-top: 12px;
+
+    font-size:
+        clamp(42px, 6vw, 70px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+
+.about-content {
+    max-width: 700px;
+
+    margin-top: 45px;
+
+    margin-left: auto;
+}
+
+
+.about-content p {
+    margin-bottom: 22px;
+
+    font-size: 18px;
+
+    color: #59685d;
+}
+
+
+/* =========================
+   MISSION
+========================= */
+
+.mission-section {
+    padding:
+        120px 28px;
+
+    background: #173522;
+
+    color: white;
+}
+
+
+.center {
+    text-align: center;
+}
+
+
+.mission-section .eyebrow {
+    color: #9bd39e;
+}
+
+
+.mission-section h2 {
+    margin-top: 12px;
+
+    font-size:
+        clamp(42px, 6vw, 70px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+
+.heading-description {
+    max-width: 560px;
+
+    margin:
+        25px auto 0;
+
+    color: #b8cbbd;
+}
+
+
+.mission-grid {
+    max-width: 1100px;
+
+    margin:
+        70px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.mission-card {
+    padding: 35px;
+
+    border:
+        1px solid #365540;
+
+    border-radius: 22px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.mission-card:hover {
+    transform: translateY(-6px);
+
+    background: #1d412a;
+}
+
+
+.mission-number {
+    color: #8fc995;
+
+    font-weight: 800;
+
+    font-size: 13px;
+}
+
+
+.mission-card h3 {
+    margin:
+        20px 0 10px;
+
+    font-size: 23px;
+}
+
+
+.mission-card p {
+    color: #b9c9bd;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid {
+    margin-top: 55px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.project-card {
+    min-height: 235px;
+
+    padding: 30px;
+
+    background: white;
+
+    border:
+        1px solid #dfe7df;
+
+    border-radius: 22px;
+
+    transition:
+        0.3s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+}
+
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(38, 71, 43, 0.1);
+}
+
+
+.project-icon {
+    font-size: 35px;
+
+    display: block;
+
+    margin-bottom: 12px;
+}
+
+
+.project-card h3 {
+    margin:
+        8px 0 8px;
+
+    font-size: 20px;
+}
+
+
+.project-card p {
+    color: #68766b;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   TEAM / FOUNDER
+========================= */
+
+.team-section {
+    padding:
+        120px 28px;
+
+    background: #e9f0e6;
+}
+
+
+.founder-card {
+    max-width: 900px;
+
+    margin:
+        60px auto 0;
+
+    padding: 42px;
+
+    background: white;
+
+    border-radius: 26px;
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: flex-start;
+
+    box-shadow:
+        0 20px 50px
+        rgba(42, 71, 46, 0.08);
+}
+
+
+/* FOUNDER LOGO */
+
+.founder-icon {
+    width: 95px;
+
+    height: 95px;
+
+    flex-shrink: 0;
+
+    border-radius: 22px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #f0f5ee;
+
+    border: 1px solid #dce8da;
+
+    overflow: hidden;
+}
+
+
+.founder-icon img {
+    width: 78px;
+
+    height: 78px;
+
+    object-fit: contain;
+}
+
+
+.founder-content {
+    flex: 1;
+}
+
+
+.founder-role {
+    color: #23843f;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.founder-card h3 {
+    font-size: 30px;
+
+    margin:
+        4px 0 10px;
+}
+
+
+.founder-description {
+    color: #647167;
+
+    margin-bottom: 22px;
+}
+
+
+/* QUOTE */
+
+.founder-card blockquote {
+    margin-top: 18px;
+
+    padding-left: 18px;
+
+    border-left: 3px solid #23843f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+    color: #27382c;
+}
+
+
+.quote-author {
+    margin-top: 7px;
+
+    color: #718075;
+
+    font-size: 13px;
+}
+
+
+.founder-motto {
+    margin-top: 20px;
+
+    color: #23843f;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-message {
+    padding:
+        140px 28px;
+
+    text-align: center;
+
+    background: #f5f8f3;
+}
+
+
+.final-message h2 {
+    margin-top: 15px;
+
+    font-size:
+        clamp(50px, 8vw, 90px);
+
+    line-height: 0.95;
+
+    letter-spacing: -4px;
+}
+
+
+.final-message > p:not(.eyebrow) {
+    max-width: 600px;
+
+    margin:
+        30px auto;
+
+    color: #657268;
+
+    font-size: 17px;
+}
+
+
+.final-credit {
+    margin-top: 45px;
+
+    color: #647167;
+}
+
+
+.final-credit strong {
+    color: #23843f;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding:
+        45px 28px;
+
+    text-align: center;
+
+    background: #11271a;
+
+    color: #aebdaf;
+}
+
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 800;
+}
+
+
+.footer-logo img {
+    width: 40px;
+
+    height: 40px;
+
+    object-fit: contain;
+}
+
+
+footer p {
+    margin-top: 8px;
+}
+
+
+.copyright {
+    margin-top: 25px;
+
+    font-size: 12px;
+
+    color: #738578;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding-top: 60px;
+    }
+
+
+    .hero-nature {
+        min-height: 400px;
+    }
+
+
+    .nature-scene {
+        width: 350px;
+
+        height: 350px;
+    }
+
+
+    .mission-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .projects-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        padding:
+            8px 18px;
+    }
+
+
+    .brand {
+        font-size: 19px;
+    }
+
+
+    .hero {
+        padding:
+            50px 20px;
+    }
+
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+
+    .hero-nature {
+        min-height: 340px;
+    }
+
+
+    .nature-scene {
+        width: 290px;
+
+        height: 290px;
+    }
+
+
+    .sun {
+        width: 60px;
+
+        height: 60px;
+
+        top: 45px;
+
+        right: 50px;
+    }
+
+
+    .hill-back {
+        width: 380px;
+
+        height: 180px;
+
+        left: -45px;
+    }
+
+
+    .hill-front {
+        width: 420px;
+
+        height: 200px;
+
+        left: -65px;
+    }
+
+
+    .tree-one {
+        left: 40px;
+    }
+
+
+    .tree-two {
+        right: 40px;
+    }
+
+
+    .tree-three {
+        left: 135px;
+    }
+
+
+    .tree-top {
+        width: 58px;
+
+        height: 58px;
+    }
+
+
+    .tree-trunk {
+        width: 12px;
+
+        height: 58px;
+    }
+
+
+    .tree {
+        bottom: 60px;
+    }
+
+
+    .hero-card {
+        bottom: 15px;
+
+        left: 5px;
+
+        padding:
+            11px 14px;
+    }
+
+
+    .hero-card img {
+        width: 30px;
+
+        height: 30px;
+    }
+
+
+    .development-card {
+        flex-direction: column;
+    }
+
+
+    .mission-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .founder-card {
+        flex-direction: column;
+
+        text-align: center;
+
+        align-items: center;
+
+        padding: 30px 24px;
+    }
+
+
+    .founder-card blockquote {
+        text-align: left;
+    }
+
+
+    .section,
+    .mission-section,
+    .team-section {
+        padding-top: 80px;
+
+        padding-bottom: 80px;
+    }
+
+
+    .final-message {
+        padding:
+            100px 20px;
+    }
+
+}
