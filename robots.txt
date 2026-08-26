@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velichetiakhil17-blip.github.io/NatureX-Webdesign/sitemap.xml
